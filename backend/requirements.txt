@@ -1,0 +1,43 @@
+# ── Web framework ─────────────────────────────────────────────────────────────
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20         # file uploads
+
+# ── Config ────────────────────────────────────────────────────────────────────
+pydantic-settings==2.7.1
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+pgvector==0.3.6
+
+# ── Document parsing ──────────────────────────────────────────────────────────
+pdfplumber==0.11.4               # PDF → text + tables
+pymupdf==1.25.3                  # PDF → images (fitz)
+python-docx==1.1.2               # DOCX → text + tables
+unstructured[pdf]==0.16.11       # fallback complex layout parsing
+pillow==11.1.0                   # image loading + processing
+
+# ── Audio ─────────────────────────────────────────────────────────────────────
+openai-whisper==20240930         # local Whisper STT
+soundfile==0.12.1                # audio file reading
+
+# ── Embeddings ────────────────────────────────────────────────────────────────
+transformers==4.48.2             # HuggingFace CLIP
+torch==2.5.1                     # CLIP backend (CPU)
+torchvision==0.20.1
+
+# ── Cloud providers ───────────────────────────────────────────────────────────
+openai==1.59.6                   # GPT-4o + Whisper API (only external API needed)
+
+# ── Reranker (always local, no API key) ───────────────────────────────────────
+sentence-transformers==3.3.1     # cross-encoder/ms-marco-MiniLM-L-6-v2
+
+# ── Tokenization ─────────────────────────────────────────────────────────────
+tiktoken==0.8.0                  # chunk size counting
+
+# ── Language detection ────────────────────────────────────────────────────────
+langdetect==1.0.9
+
+# ── HTTP (Ollama client) ──────────────────────────────────────────────────────
+httpx==0.28.1

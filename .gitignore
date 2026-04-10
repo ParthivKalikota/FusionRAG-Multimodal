@@ -1,0 +1,42 @@
+# ── Environment Variables ─────────────────────────
+.env
+*.env
+!.env.example
+
+# ── Temp/Scratch Files ────────────────────────────
+samp.txt
+PROJECT_OVERVIEW.md
+
+# ── Backend (Python) ──────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/rag_venv/
+venv/
+.venv/
+env/
+
+# Backend execution directories
+backend/storage/*
+!backend/storage/.gitkeep
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ── Frontend (Node/Next.js) ───────────────────────
+# (Frontend already has its own .gitignore, but catching from root to be safe)
+node_modules/
+.next/
+out/
+build/
+.vercel
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── IDEs / OS ─────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
