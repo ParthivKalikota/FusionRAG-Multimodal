@@ -106,17 +106,4 @@ The fused, re-ranked context (text passages plus images or image descriptions) i
 - **Answer relevance:** does it actually address the question?
 - **Correctness:** exact match / F1 against reference answers, or LLM-as-judge scoring.
 
-## 7. Challenges
 
-- **Modality gap:** embeddings of different modalities are not perfectly aligned.
-- **Score calibration:** similarity scores from different retrievers are not directly comparable, which motivates rank-based fusion.
-- **Noisy retrieval:** irrelevant context can mislead the generator.
-- **Cost and latency:** multimodal encoders and re-rankers add computation.
-- **Evaluation difficulty:** judging answers that depend on visual evidence is harder than text-only evaluation.
-
-## 8. References
-
-- Lewis et al., *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*, 2020.
-- Radford et al., *Learning Transferable Visual Models From Natural Language Supervision (CLIP)*, 2021.
-- Cormack et al., *Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods*, 2009.
-- Abootorabi et al., *Ask in Any Modality: A Comprehensive Survey on Multimodal Retrieval-Augmented Generation*, 2025.
